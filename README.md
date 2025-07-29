@@ -1,7 +1,7 @@
 # 🏙️ NYC Airbnb EDA
 
 This project explores the NYC Airbnb dataset using pure Python scripts.
-You can see the output and its interpretations at https://github.com/usmandilshad-tech/NYC-Airbnb-Open-Data/blob/main/interpretation.html
+You can see the output and its interpretations at https://htmlpreview.github.io/?https://github.com/usmandilshad-tech/NYC-Airbnb-Open-Data/blob/main/interpretation.html
 
 ## 🔍 What’s Included
 - Modular scripts for data cleaning, univariate and bivariate EDA
