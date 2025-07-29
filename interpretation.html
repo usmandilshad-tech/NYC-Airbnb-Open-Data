@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +7,41 @@
     <style>
         body { font-family: Arial, sans-serif; max-width: 900px; margin: 40px auto; line-height: 1.6; }
         h2 { color: #333; }
-        img { width: 100%; max-width: 600px; display: block; margin-bottom: 20px; }
+        img { width: 100%; max-width: 600px; display: block; margin-bottom: 20px; border: 1px solid #ddd; }
     </style>
 </head>
 <body>
     <h1>🧠 NYC Airbnb – Data Storytelling & Interpretations</h1>
 
-    <h2>Room Types Distribution</h2>
+    <h2>1. Room Types Distribution</h2>
     <img src="output/charts/room_types_pie.png" alt="Room Types">
-    <p>Over 52% of listings are entire homes/apartments... [Add full interpretation here]</p>
+    <p>Over <strong>52%</strong> of listings in NYC are for <strong>entire homes or apartments</strong>, followed by <strong>private rooms</strong> at around <strong>45%</strong>, and a small fraction (<strong>2.2%</strong>) offering <strong>shared rooms</strong>.<br>
+    <strong>Interpretation:</strong> This suggests that the NYC Airbnb market leans toward privacy and comfort, with hosts targeting longer-term stays or travelers who prefer full-unit access. Shared rooms are rare, indicating either low demand or policy-driven limitations in offering shared spaces.</p>
 
-    <h2>Listings by Borough</h2>
+    <h2>2. Listings by Borough</h2>
     <img src="output/charts/listings_by_borough.png" alt="Listings by Borough">
-    <p>Manhattan and Brooklyn dominate the listing count... [Add full interpretation here]</p>
+    <p>Manhattan and Brooklyn have the highest number of listings, each exceeding 16,000, while Queens has around 4,500. Bronx and Staten Island have significantly fewer listings.<br>
+    <strong>Interpretation:</strong> This shows a geographic skew of Airbnb activity in NYC, closely aligned with tourist hotspots and economic centers. For Airbnb investors or city planners, it indicates where regulations or competition are most intense.</p>
 
-    <!-- Repeat for other charts -->
+    <h2>3. Average Price by Borough</h2>
+    <img src="output/charts/avg_price_by_borough.png" alt="Average Price by Borough">
+    <p>Manhattan leads with the highest average nightly rate, followed by Brooklyn and Queens. The Bronx and Staten Island are the most budget-friendly.<br>
+    <strong>Interpretation:</strong> Pricing aligns with NYC's cost-of-living index and tourism demand. This could guide travelers on budgeting or help hosts benchmark competitive pricing based on location.</p>
+
+    <h2>4. Room Type vs. Price (Boxplot for < $500)</h2>
+    <img src="output/charts/boxplot_roomtype_price.png" alt="Room Type vs Price">
+    <p>Entire homes/apartments show a wide spread in pricing, with a high median and numerous outliers. Private rooms are more compactly priced, mostly under $150. Shared rooms, while cheapest, show variability but are generally below $100.<br>
+    <strong>Interpretation:</strong> There’s significant price variability in full-apartment listings, possibly driven by location, size, and amenities. The pricing of private and shared rooms is more predictable, useful for both hosts and budget-conscious travelers.</p>
+
+    <h2>5. Price Distribution (Under $500)</h2>
+    <img src="output/charts/price_distribution.png" alt="Price Distribution">
+    <p>The majority of listings are priced between $50 and $150, with a steep drop-off afterward.<br>
+    <strong>Interpretation:</strong> The price distribution is right-skewed, meaning while a few luxury listings exist, most Airbnb options are modestly priced. This helps eliminate pricing outliers when calculating medians or benchmarking.</p>
+
+    <h2>6. Correlation Heatmap</h2>
+    <img src="output/charts/correlation_heatmap.png" alt="Correlation Heatmap">
+    <p>Price shows almost no correlation with other numerical features. Number of reviews and reviews per month have a strong positive correlation (0.55), indicating active listings tend to accumulate more total reviews. Minimum nights is slightly negatively correlated with review metrics.<br>
+    <strong>Interpretation:</strong> Price alone doesn't predict popularity or engagement. Instead, listings with frequent reviews may reflect consistent guest turnover, making reviews per month a proxy for activity level. Minimum stay requirements may be a barrier to frequent bookings.</p>
+
 </body>
 </html>
